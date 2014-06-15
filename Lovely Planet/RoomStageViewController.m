@@ -104,17 +104,17 @@
             BackgroundView.image = Roombackthird;
         }
         
-        if(roomPoint < 30 || (245 <= roomPoint && roomPoint < 295)){
+        if(roomPoint < 30 || (150 <= roomPoint && roomPoint < 200)){
             roomgage.image = roomgage0;
-        }else if((30 <= roomPoint && roomPoint < 60) || (150 <= roomPoint && roomPoint < 200)){
+        }else if((30 <= roomPoint && roomPoint < 60) || (200 <= roomPoint && roomPoint < 250)){
             roomgage.image = roomgage1;
-        }else if((60 <= roomPoint && roomPoint < 90) || (200 <= roomPoint && roomPoint < 250)){
+        }else if((60 <= roomPoint && roomPoint < 90) || (250 <= roomPoint && roomPoint < 300)){
             roomgage.image = roomgage2;
-        }else if((90 <= roomPoint && roomPoint <120) || (250 <= roomPoint && roomPoint < 300)){
+        }else if((90 <= roomPoint && roomPoint <120) || (300 <= roomPoint && roomPoint < 350)){
             roomgage.image = roomgage3;
-        }else if((120 <= roomPoint && roomPoint < 150) || (300 <= roomPoint && roomPoint < 350)){
+        }else if((120 <= roomPoint && roomPoint < 150) || (350 <= roomPoint && roomPoint < 400)){
             roomgage.image = roomgage4;
-        }else if(roomPoint >= 350){
+        }else if(roomPoint >= 400){
             roomgage.image = roomgage5;
             if(alertOff == 0){
                 alertOff++;

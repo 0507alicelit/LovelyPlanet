@@ -98,17 +98,17 @@
             BackgroundView.image = Tablebackthird;
         }
         
-        if(TablePoint < 5 || (45 <= TablePoint && TablePoint <= 55)){
+        if(TablePoint < 5 || (25 <= TablePoint && TablePoint <= 35)){
             tablegage.image = tablegage0;
-        }else if((5 <= TablePoint && TablePoint < 10) || (25 <= TablePoint && TablePoint < 35)){
+        }else if((5 <= TablePoint && TablePoint < 10) || (35 <= TablePoint && TablePoint < 45)){
             tablegage.image = tablegage1;
-        }else if((10 <= TablePoint && TablePoint < 15) || (35 <= TablePoint && TablePoint < 45)){
+        }else if((10 <= TablePoint && TablePoint < 15) || (45 <= TablePoint && TablePoint < 55)){
             tablegage.image = tablegage2;
-        }else if((15 <= TablePoint && TablePoint < 20) || (45 <= TablePoint && TablePoint < 55)){
+        }else if((15 <= TablePoint && TablePoint < 20) || (55 <= TablePoint && TablePoint < 65)){
             tablegage.image = tablegage3;
-        }else if((20 <= TablePoint && TablePoint < 25) || (55 <= TablePoint && TablePoint < 65)){
+        }else if((20 <= TablePoint && TablePoint < 25) || (65 <= TablePoint && TablePoint < 75)){
             tablegage.image = tablegage4;
-        }else if(TablePoint >= 65){
+        }else if(TablePoint >= 75){
             tablegage.image = tablegage5;
             if(alertOff == 0){
                 alertOff++;

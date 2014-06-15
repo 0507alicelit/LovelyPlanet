@@ -122,10 +122,10 @@
     [self presentViewController:phoneStageVC animated:YES completion:nil];
 }
 -(IBAction)tableDoor{
-    if(PhonePoint >= 10){
-        if(TablePoint < 10){
+    if(PhonePoint >= 20){
+        if(TablePoint < 75){
             tableDoor.image = openDoor;
-        }else if(TablePoint >= 10){
+        }else if(TablePoint >= 20){
             tableDoor.image = clearOpenDoor;
         }
         TableViewController *tableStageVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Table"];
@@ -143,10 +143,10 @@
     }
 }
 -(IBAction)roomDoor{
-    if(PhonePoint >= 10){
-        if(RoomPoint < 10){
+    if(PhonePoint >= 20){
+        if(RoomPoint < 350){
             roomDoor.image = openDoor;
-        }else if(RoomPoint >= 10){
+        }else if(RoomPoint >= 350){
             roomDoor.image = clearOpenDoor;
         }
         RoomStageViewController *roomStageVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Room"];
@@ -165,10 +165,10 @@
 }
 
 -(IBAction)homeDoor{
-    if(TablePoint >= 10 && RoomPoint >= 10){
-        if(HomePoint < 10){
+    if(TablePoint >= 75 && RoomPoint >= 350){
+        if(HomePoint < 850){
             homeDoor.image = openDoor;
-        }else if(HomePoint >= 10){
+        }else if(HomePoint >= 850){
             homeDoor.image = clearOpenDoor;
         }
         HomeStageViewController *homeStageVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Home"];

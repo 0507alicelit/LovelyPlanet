@@ -99,17 +99,17 @@
             BackgroundView.image = Homebackthird;
         }
         
-        if(homePoint < 70 || (5 <= homePoint && homePoint <= 5)){
+        if(homePoint < 70 || (350 <= homePoint && homePoint <= 450)){
             homegage.image = homegage0;
-        }else if((70 <= homePoint && homePoint < 140) || (350 <= homePoint && homePoint < 450)){
+        }else if((70 <= homePoint && homePoint < 140) || (450 <= homePoint && homePoint < 550)){
             homegage.image = homegage1;
-        }else if((140 <= homePoint && homePoint < 210) || (450 <= homePoint && homePoint < 550)){
+        }else if((140 <= homePoint && homePoint < 210) || (550 <= homePoint && homePoint < 650)){
             homegage.image = homegage2;
-        }else if((210 <= homePoint && homePoint < 280) || (550 <= homePoint && homePoint < 650)){
+        }else if((210 <= homePoint && homePoint < 280) || (650 <= homePoint && homePoint < 750)){
             homegage.image = homegage3;
-        }else if((280 <= homePoint && homePoint < 350) || (650 <= homePoint && homePoint < 750)){
+        }else if((280 <= homePoint && homePoint < 350) || (750 <= homePoint && homePoint < 850)){
             homegage.image = homegage4;
-        }else if(homePoint >= 750){
+        }else if(homePoint >= 850){
             homegage.image = homegage5;
             if(alertOff == 0){
                 alertOff++;

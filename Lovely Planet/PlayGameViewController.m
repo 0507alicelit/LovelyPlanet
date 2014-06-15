@@ -18,6 +18,7 @@
     piyokasoku=0.9;
     heartpoint=0;
     piyohantei.text = @"";
+    point=0;
 
     piyotimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(up) userInfo:Nil repeats:YES];//タイマー
     
