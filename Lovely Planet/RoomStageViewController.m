@@ -42,35 +42,34 @@
         NSLog(@"%@", @"first");
         BackgroundView.image = Roombackfirst;
     }
-    if(roomPoint >= 150 && roomPoint < 600){
+    if(roomPoint >= 150 && roomPoint < 400){
         RoomView.image = Roomsecond;
         NSLog(@"%@", @"second");
         BackgroundView.image = Roombacksecond;
     }
-    if(roomPoint >= 600){
+    if(roomPoint >= 400){
         RoomView.image = Roomthird;
         NSLog(@"%@", @"third");
         BackgroundView.image = Roombackthird;
     }
     
-    if(roomPoint < 30 || (245 <= roomPoint && roomPoint < 295)){
+    if(roomPoint < 30 || (150 <= roomPoint && roomPoint < 200)){
         roomgage.image = roomgage0;
-    }else if((30 <= roomPoint && roomPoint < 60) || (150 <= roomPoint && roomPoint < 200)){
+    }else if((30 <= roomPoint && roomPoint < 60) || (200 <= roomPoint && roomPoint < 250)){
         roomgage.image = roomgage1;
-    }else if((60 <= roomPoint && roomPoint < 90) || (200 <= roomPoint && roomPoint < 250)){
+    }else if((60 <= roomPoint && roomPoint < 90) || (250 <= roomPoint && roomPoint < 300)){
         roomgage.image = roomgage2;
-    }else if((90 <= roomPoint && roomPoint <120) || (250 <= roomPoint && roomPoint < 300)){
+    }else if((90 <= roomPoint && roomPoint <120) || (300 <= roomPoint && roomPoint < 350)){
         roomgage.image = roomgage3;
-    }else if((120 <= roomPoint && roomPoint < 150) || (300 <= roomPoint && roomPoint < 350)){
+    }else if((120 <= roomPoint && roomPoint < 150) || (350 <= roomPoint && roomPoint < 400)){
         roomgage.image = roomgage4;
-    }else if(roomPoint >= 350){
+    }else if(roomPoint >= 400){
         roomgage.image = roomgage5;
     }
-
 }
 
 -(IBAction)pour{
-    if(heartpoint>0 && roomPoint < 350){
+    if(heartpoint>0 && roomPoint < 400){
         NSUserDefaults *pointUd = [NSUserDefaults standardUserDefaults];//設定1
         heartpoint = (int)[pointUd integerForKey:@"point"];//設定2
         heartpoint--;
@@ -93,12 +92,12 @@
             NSLog(@"%@", @"first");
             BackgroundView.image = Roombackfirst;
         }
-        if(roomPoint >= 150 && roomPoint < 600){
+        if(roomPoint >= 150 && roomPoint < 400){
             RoomView.image = Roomsecond;
             NSLog(@"%@", @"second");
             BackgroundView.image = Roombacksecond;
         }
-        if(roomPoint >= 600){
+        if(roomPoint >= 400){
             RoomView.image = Roomthird;
             NSLog(@"%@", @"third");
             BackgroundView.image = Roombackthird;

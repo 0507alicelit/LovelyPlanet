@@ -77,14 +77,14 @@
     
     NSLog(@"%d変更後", heartpoint);
     
+    //phone door image change
     if (PhonePoint < 20) {
         phoneDoor.image = closeDoor;
-        NSLog(@"CloseDoor");
     }else if(PhonePoint >= 20){
         phoneDoor.image = clearDoor;
-        NSLog(@"ClearDoor");
     }
     
+    //table door image change
     if(PhonePoint < 20){
         tableDoor.image = lockDoor;
     }else if (PhonePoint >= 20 && TablePoint < 75){
@@ -93,17 +93,19 @@
         tableDoor.image = clearDoor;
     }
     
+    //room door image change
     if(PhonePoint < 20){
         roomDoor.image = lockDoor;
-    }else if (PhonePoint >= 20 && RoomPoint < 600){
+    }else if (PhonePoint >= 20 && RoomPoint < 400){
         roomDoor.image = closeDoor;
-    }else if(RoomPoint >= 600){
+    }else if(RoomPoint >= 400){
         roomDoor.image = clearDoor;
     }
     
-    if(TablePoint < 75 && RoomPoint < 600){
+    //home door image change
+    if(TablePoint < 75 && RoomPoint < 400){
         homeDoor.image = lockDoor;
-    }else if (TablePoint >= 75 && RoomPoint >= 600 && HomePoint < 850){
+    }else if (TablePoint >= 75 && RoomPoint >= 400 && HomePoint < 850){
         homeDoor.image = closeDoor;
     }else if(HomePoint >= 850){
         homeDoor.image = clearDoor;
@@ -113,9 +115,9 @@
 }
 
 -(IBAction)phoneDoor{
-    if(PhonePoint < 10){
+    if(PhonePoint < 20){
         phoneDoor.image = openDoor;
-    }else if(PhonePoint >= 10){
+    }else if(PhonePoint >= 20){
         phoneDoor.image = clearOpenDoor;
     }
     PhoneStageViewController *phoneStageVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Phone"];
@@ -144,9 +146,9 @@
 }
 -(IBAction)roomDoor{
     if(PhonePoint >= 20){
-        if(RoomPoint < 350){
+        if(RoomPoint < 400){
             roomDoor.image = openDoor;
-        }else if(RoomPoint >= 350){
+        }else if(RoomPoint >= 400){
             roomDoor.image = clearOpenDoor;
         }
         RoomStageViewController *roomStageVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Room"];
