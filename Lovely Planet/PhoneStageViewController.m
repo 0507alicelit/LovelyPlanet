@@ -11,6 +11,7 @@
 @implementation PhoneStageViewController
 
 -(void)viewDidLoad{
+    //all image
     phonefirst = [UIImage imageNamed:@"iPhone1.png"];
     phonesecond = [UIImage imageNamed:@"iPhone2.png"];
     phonethird = [UIImage imageNamed:@"iPhone3.png"];
@@ -28,6 +29,7 @@
     
     [[NSUserDefaults standardUserDefaults] synchronize];
     
+    //number 読み込み
     NSUserDefaults *pointUd = [NSUserDefaults standardUserDefaults];//読み込み1
     heartpoint = (int)[pointUd integerForKey:@"point"];//読み込み2
     
