@@ -877,6 +877,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "ありす";
 				TargetAttributes = {
+					222DC25F1805414800F4DFF2 = {
+						DevelopmentTeam = FTM2RGHHTJ;
+					};
 					222DC2801805414800F4DFF2 = {
 						TestTargetID = 222DC25F1805414800F4DFF2;
 					};

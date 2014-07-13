@@ -71,7 +71,7 @@
     RoomPoint = (int)[RoomUd integerForKey:@"Room"];//読み込み2
     
     NSUserDefaults *HomeUd = [NSUserDefaults standardUserDefaults];//読み込み1
-    HomePoint = [HomeUd integerForKey:@"Home"];//読み込み2
+    HomePoint = (int)[HomeUd integerForKey:@"Home"];//読み込み2
     
     heartLabel.text = [NSString stringWithFormat:@"%d",heartpoint];
     

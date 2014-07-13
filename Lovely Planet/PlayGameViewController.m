@@ -55,6 +55,7 @@
     piyotimelabel.text = [NSString stringWithFormat:@"%.2f",piyotime];//時間表示
     if (count == 140) {
         [self makepiyo];//1つめのpiyoを作る
+        NSLog(@"piyopiyo");
     }
     if (count > 140) {
         [self movepiyo];//1つめのpiyoが作られてからmovipiyoをする

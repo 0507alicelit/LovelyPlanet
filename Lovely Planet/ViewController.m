@@ -54,7 +54,7 @@
 - (void)makeAndMoveHeart
 {
     
-    if (count%60==0) {
+    if (count%100==0) {
         
         //新しく♡をつくる
         int random = arc4random()%10-5;
