@@ -29,10 +29,10 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     NSUserDefaults *pointUd = [NSUserDefaults standardUserDefaults];//読み込み1
-    heartpoint = [pointUd integerForKey:@"point"];//読み込み2
+    heartpoint = (int)[pointUd integerForKey:@"point"];//読み込み2
     
     NSUserDefaults *HomeUd = [NSUserDefaults standardUserDefaults];//読み込み1
-    homePoint = [HomeUd integerForKey:@"Home"];//読み込み2
+    homePoint = (int)[HomeUd integerForKey:@"Home"];//読み込み2
     
     HomeLabel.text = [NSString stringWithFormat:@"%d",heartpoint];
     
@@ -70,13 +70,13 @@
 -(IBAction)pour{
     if(heartpoint>0 && homePoint < 850){
         NSUserDefaults *pointUd = [NSUserDefaults standardUserDefaults];//設定1
-        heartpoint = [pointUd integerForKey:@"point"];//設定2
+        heartpoint = (int)[pointUd integerForKey:@"point"];//設定2
         heartpoint--;
         [pointUd setInteger:heartpoint forKey:@"point"];//設定3
         [[NSUserDefaults standardUserDefaults] synchronize];
         
         NSUserDefaults *HomeUd = [NSUserDefaults standardUserDefaults];//設定1
-        homePoint = [HomeUd integerForKey:@"Home"];//設定2
+        homePoint = (int)[HomeUd integerForKey:@"Home"];//設定2
         homePoint++;
         [HomeUd setInteger:homePoint forKey:@"Home"];//設定3
         [[NSUserDefaults standardUserDefaults] synchronize];

@@ -16,11 +16,12 @@ int point;
 @interface PlayGameViewController : UIViewController{
 
     int heartpoint;
-    //int toatalheartpoint;
+    int nowHeartPoint;
     IBOutlet UILabel *piyotimelabel;
     IBOutlet UILabel *piyohantei;
     IBOutlet UILabel *Pointlabel;
     IBOutlet UIImageView *hit;
+    IBOutlet UIImageView *countDownView;
     float piyotime;
     float piyokasoku;
     float appear;
@@ -36,6 +37,9 @@ int point;
     UIImage *piyograypa;
     UIImage *piyobluepa;
     UIImage *piyoorangepa;
+    UIImage *countdown1;
+    UIImage *countdown2;
+    UIImage *countdown3;
     UIImageView *piyoview;
     NSMutableArray *piyoArray;
     NSTimer *timer;

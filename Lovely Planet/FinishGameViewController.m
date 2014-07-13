@@ -10,7 +10,9 @@
 
 @implementation FinishGameViewController
 -(void)viewDidLoad{
-    piyokekka.text = [NSString stringWithFormat:@"%d点",point];
+    NSUserDefaults *nowPointUd = [NSUserDefaults standardUserDefaults];//読み込み1
+    nowHeartPoint = (int)[nowPointUd integerForKey:@"np"];//読み込み2
+    piyokekka.text = [NSString stringWithFormat:@"%d点",nowHeartPoint];
 }
 
 -(IBAction)onemore{

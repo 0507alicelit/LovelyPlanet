@@ -14,6 +14,7 @@
 
 @interface FinishGameViewController : UIViewController{
     IBOutlet UILabel *piyokekka;
+    int nowHeartPoint;
 
 }
 

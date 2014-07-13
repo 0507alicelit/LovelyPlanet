@@ -19,7 +19,9 @@
     heartpoint=0;
     piyohantei.text = @"";
     point=0;
-
+    nowHeartPoint=0;
+    
+    [NSThread sleepForTimeInterval:5.0];
     piyotimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(up) userInfo:Nil repeats:YES];//タイマー
     
     piyoblue = [UIImage imageNamed:@"piyoblue.png"];
@@ -32,6 +34,9 @@
     piyoorangepa = [UIImage imageNamed:@"piyoorangepa.png"];
     piyopinkpa = [UIImage imageNamed:@"piyopinkpa.png"];
     piyoyellowpa = [UIImage imageNamed:@"piyoyellowpa.png"];
+    countdown1 = [UIImage imageNamed:@"1.png"];
+    countdown2 = [UIImage imageNamed:@"2.png"];
+    countdown3 = [UIImage imageNamed:@"3.png"];
     
     piyoArray = [NSMutableArray array];
 
@@ -42,8 +47,12 @@
     NSUserDefaults *pointUd = [NSUserDefaults standardUserDefaults];//読み込み1
     heartpoint = (int)[pointUd integerForKey:@"point"];//読み込み2
     
+    if(piyotimer < 1){
+    countDownView.image = countdown1;
+    }else if(pi)
     //増原
     div = 140;
+
 }
 
 
@@ -60,7 +69,6 @@
     if (count > 140) {
         [self movepiyo];//1つめのpiyoが作られてからmovipiyoをする
     }
-    
 }
 
 
@@ -184,6 +192,10 @@
         heartpoint = heartpoint + point;
         [pointUd setInteger:heartpoint forKey:@"point"];//設定3
         [pointUd synchronize];
+        NSUserDefaults *nowPointUd = [NSUserDefaults standardUserDefaults];//設定1
+        point = (int)[nowPointUd integerForKey:@"np"];//設定2
+        [nowPointUd setInteger:point forKey:@"np"];//設定3
+        [nowPointUd synchronize];
         NSLog(@"%d heart",heartpoint);
         NSLog(@"%d point",point);
         FinishGameViewController *finishGameStageVC = [self.storyboard instantiateViewControllerWithIdentifier:@"FinishGame"];
@@ -201,7 +213,8 @@
             [self destroy];
             [piyoArray removeObject:iv];
             [iv removeFromSuperview];
-            point++;
+            point = point + 2;
+            nowHeartPoint = nowHeartPoint + 2;
             Pointlabel.text = [NSString stringWithFormat:@"%d点",point];
         }else if (abs(hantei)<=80 && color==iv.tag) {
             NSLog(@"GOOD!!!");
@@ -210,6 +223,7 @@
             [piyoArray removeObject:iv];
             [iv removeFromSuperview];
             point++;
+            nowHeartPoint++;
             Pointlabel.text = [NSString stringWithFormat:@"%d点",point];
             
         }else{
@@ -220,6 +234,9 @@
             heartpoint = heartpoint + point;
             [pointUd setInteger:heartpoint forKey:@"point"];//設定3
             [pointUd synchronize];
+            NSUserDefaults *nowPointUd = [NSUserDefaults standardUserDefaults];//設定1
+            [nowPointUd setInteger:point forKey:@"np"];//設定2
+            [nowPointUd synchronize];
             NSLog(@"%d heart",heartpoint);
             NSLog(@"%d point",point);
             FinishGameViewController *finishGameStageVC = [self.storyboard instantiateViewControllerWithIdentifier:@"FinishGame"];
@@ -253,8 +270,6 @@
             break;
     }
 }
-
-
 
 
 
