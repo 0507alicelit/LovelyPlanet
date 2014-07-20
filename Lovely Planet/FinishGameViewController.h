@@ -10,6 +10,9 @@
 #import "StageSelectViewController.h"
 #import "GameStartViewController.h"
 #import "PlayGameViewController.h"
+#import <Social/Social.h>
+#import <Accounts/Accounts.h>
+
 
 
 @interface FinishGameViewController : UIViewController{
@@ -20,6 +23,7 @@
 
 -(IBAction)onemore;
 -(IBAction)finish;
+-(IBAction)twitterShare;
 
 
 

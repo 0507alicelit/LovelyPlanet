@@ -47,9 +47,6 @@
     NSUserDefaults *pointUd = [NSUserDefaults standardUserDefaults];//読み込み1
     heartpoint = (int)[pointUd integerForKey:@"point"];//読み込み2
     
-    if(piyotimer < 1){
-    countDownView.image = countdown1;
-    }else if(pi)
     //増原
     div = 140;
 
