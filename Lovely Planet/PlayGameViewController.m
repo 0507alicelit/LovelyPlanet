@@ -21,7 +21,7 @@
     point=0;
     nowHeartPoint=0;
     
-    [NSThread sleepForTimeInterval:5.0];
+    //[NSThread sleepForTimeInterval:5.0];
     piyotimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(up) userInfo:Nil repeats:YES];//タイマー
     
     piyoblue = [UIImage imageNamed:@"piyoblue.png"];

@@ -9,6 +9,9 @@
 #import "FinishGameViewController.h"
 
 @implementation FinishGameViewController
+
+
+
 -(void)viewDidLoad{
     NSUserDefaults *nowPointUd = [NSUserDefaults standardUserDefaults];//読み込み1
     nowHeartPoint = (int)[nowPointUd integerForKey:@"np"];//読み込み2
@@ -28,12 +31,14 @@
     
     // Twitterアカウントが端末に設定されているか？
     if ( ! [SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+        NSLog(@"設定できてません");
         return;
     }
     
     // 設定されてるアカウントを取得(マルチアカウントってな)
     ACAccountStore *accountStore = [ACAccountStore new];
     ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+
     
     [accountStore requestAccessToAccountsWithType:accountType
                                           options:nil
@@ -44,13 +49,27 @@
                                            }
                                            
                                            self.accounts = [accountStore accountsWithAccountType:accountType];
+                                           
+                                           // ゲーム用、プライベート用などいろいろあるとおもうんで
+                                           // せめて選ばせたい
+                                           dispatch_async(dispatch_get_main_queue(), ^{
+                                               UIActionSheet *actionSheet = [UIActionSheet new];
+                                               actionSheet.title = @"アカウントえらんでね";
+                                               for (ACAccount *account in self.accounts) {
+                                                   [actionSheet addButtonWithTitle:account.username];
+                                               }
+                                               [actionSheet addButtonWithTitle:@"cancel"];
+                                               actionSheet.cancelButtonIndex = [self.accounts count];
+                                               actionSheet.delegate = self;
+                                               [actionSheet showInView:self.view];
+                                           });
+                                           
                                        }];
     
 }
 
 // アカウント選択後
-- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
-{
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex{
     if (buttonIndex == actionSheet.cancelButtonIndex) {
         return;
     }
@@ -64,7 +83,10 @@
     
     // twitter api
     NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/update_with_media.json"];
-    NSDictionary *params = @{@"status" : @"%d点でした！「Lovely Planet」#らぶぷら",nowHeartPoint};  // めっせーじ
+    NSString * massage = [NSString stringWithFormat:@"%d点でした！「Lovely Planet」#らぶぷら",nowHeartPoint];
+    NSDictionary *params = @{@"status" : massage};  // めっせーじ
+    
+    
     // request の作成
     SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter
                                             requestMethod:SLRequestMethodPOST

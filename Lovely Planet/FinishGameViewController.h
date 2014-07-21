@@ -15,11 +15,13 @@
 
 
 
-@interface FinishGameViewController : UIViewController{
+@interface FinishGameViewController : UIViewController<UIActionSheetDelegate>{
     IBOutlet UILabel *piyokekka;
     int nowHeartPoint;
 
 }
+
+@property (strong, nonatomic) NSArray *accounts;
 
 -(IBAction)onemore;
 -(IBAction)finish;
