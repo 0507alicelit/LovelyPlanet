@@ -136,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="687" y="140"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Start View Controller-->
         <scene sceneID="ma7-iV-aT2">
             <objects>
-                <viewController id="A3N-MY-T9l" sceneMemberID="viewController">
+                <viewController id="A3N-MY-T9l" customClass="GameStartViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gdw-Hj-TCE"/>
                         <viewControllerLayoutGuide type="bottom" id="Hso-XI-R4G"/>
@@ -151,17 +151,23 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gamestartbackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZZN-vx-Hz3">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qm-gb-Gmk">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                                <state key="normal" backgroundImage="gametouch.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfT-Hk-D4h">
                                 <rect key="frame" x="0.0" y="0.0" width="80" height="67"/>
                                 <state key="normal" backgroundImage="gamebackbutton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="back" destination="A3N-MY-T9l" eventType="touchUpInside" id="l80-h8-bKb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qm-gb-Gmk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <state key="normal" backgroundImage="gametouch.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="start" destination="A3N-MY-T9l" eventType="touchUpInside" id="z93-mS-UMP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -171,10 +177,10 @@
             </objects>
             <point key="canvasLocation" x="-417" y="-528"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Game View Controller-->
         <scene sceneID="PTs-8R-qKo">
             <objects>
-                <viewController id="wVS-8w-vCf" sceneMemberID="viewController">
+                <viewController id="wVS-8w-vCf" customClass="PlayGameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7dt-lL-Dju"/>
                         <viewControllerLayoutGuide type="bottom" id="3WC-Qc-duC"/>
@@ -203,43 +209,82 @@
                                 <state key="normal" image="eggyellow.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="eggYellow" destination="wVS-8w-vCf" eventType="touchUpInside" id="sht-qr-pYX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhT-Uv-qXt">
                                 <rect key="frame" x="164" y="260" width="100" height="100"/>
                                 <state key="normal" image="eggorange.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="eggOrange" destination="wVS-8w-vCf" eventType="touchUpInside" id="1yp-yo-Oqn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzq-Sy-WLT">
                                 <rect key="frame" x="220" y="354" width="100" height="100"/>
                                 <state key="normal" image="eggblue.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="eggBlue" destination="wVS-8w-vCf" eventType="touchUpInside" id="T9k-iN-0ZD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZ8-gy-Oy5">
                                 <rect key="frame" x="110" y="354" width="100" height="100"/>
                                 <state key="normal" image="eggglay.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="eggGlay" destination="wVS-8w-vCf" eventType="touchUpInside" id="vzP-VI-csL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGW-EN-0LC">
                                 <rect key="frame" x="0.0" y="354" width="100" height="100"/>
                                 <state key="normal" image="eggpink.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="eggPink" destination="wVS-8w-vCf" eventType="touchUpInside" id="uld-qH-PcX"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKz-qp-Vnl">
+                                <rect key="frame" x="246" y="166" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="点" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIl-Wp-1VL">
+                                <rect key="frame" x="287" y="166" width="17" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3w-co-OUM">
+                                <rect key="frame" x="241" y="137" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="Pointlabel" destination="xKz-qp-Vnl" id="AIh-CP-ATi"/>
+                        <outlet property="hit" destination="aoN-HJ-7q0" id="zad-dK-Idy"/>
+                        <outlet property="piyohantei" destination="rJF-RM-KDS" id="eBb-Yf-mF4"/>
+                        <outlet property="piyotimelabel" destination="V3w-co-OUM" id="LdA-ph-fb5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UBM-Vv-H1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-55" y="-528"/>
         </scene>
-        <!--View Controller-->
+        <!--Finish Game View Controller-->
         <scene sceneID="X1M-LB-Jbp">
             <objects>
-                <viewController id="Eu5-i9-Obw" sceneMemberID="viewController">
+                <viewController id="Eu5-i9-Obw" customClass="FinishGameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1B8-Gj-pUI"/>
                         <viewControllerLayoutGuide type="bottom" id="2Jl-aL-MRp"/>
@@ -258,12 +303,18 @@
                                 <state key="normal" image="finishbutton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="finish" destination="Eu5-i9-Obw" eventType="touchUpInside" id="D6i-xH-27i"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Waj-BC-KKl">
                                 <rect key="frame" x="64" y="296" width="192" height="70"/>
                                 <state key="normal" image="continuebutton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onemore" destination="Eu5-i9-Obw" eventType="touchUpInside" id="Jb0-RW-02N"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNA-Zj-gat">
                                 <rect key="frame" x="82" y="62" width="105" height="21"/>
@@ -280,6 +331,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="piyokekka" destination="sNA-Zj-gat" id="2b4-2a-v1W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V1t-f2-9Wq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
