@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Item-->
+        <!--Item-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -48,7 +49,7 @@
             </objects>
             <point key="canvasLocation" x="-88" y="-458"/>
         </scene>
-        <!--Stage Select View Controller - Item-->
+        <!--Item-->
         <scene sceneID="blM-2Z-97r">
             <objects>
                 <viewController storyboardIdentifier="StageSelect" id="zOd-2J-uKg" customClass="StageSelectViewController" sceneMemberID="viewController">
@@ -298,11 +299,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pour" destination="J4b-at-ODu" eventType="touchDown" id="vyu-Kf-rsr"/>
+                                    <action selector="pour" destination="J4b-at-ODu" eventType="touchUpInside" id="x4h-Dr-zXt"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1T7-JN-zuV">
-                                <rect key="frame" x="-65" y="59" width="450" height="450"/>
+                                <rect key="frame" x="-65" y="50" width="450" height="450"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="↑タップでハート注入♡" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jxT-E3-qi7">
@@ -319,7 +320,7 @@
                     <connections>
                         <outlet property="BackgroundView" destination="luV-Pw-77S" id="gHU-o3-IZr"/>
                         <outlet property="PhoneLabel" destination="2YE-TN-cQc" id="ajW-Zr-LK8"/>
-                        <outlet property="PhoneView" destination="erG-Fi-xSd" id="hcm-yb-r7M"/>
+                        <outlet property="PhoneView" destination="erG-Fi-xSd" id="nLZ-x1-JEp"/>
                         <outlet property="Phonegage" destination="Gfw-63-uuG" id="1TI-Sj-lSP"/>
                         <outlet property="heartAnimeView" destination="1T7-JN-zuV" id="fTW-Xg-9qH"/>
                     </connections>
@@ -487,7 +488,7 @@
             </objects>
             <point key="canvasLocation" x="931" y="193"/>
         </scene>
-        <!--Game Start View Controller - Item-->
+        <!--Item-->
         <scene sceneID="dnu-yT-HO8">
             <objects>
                 <viewController storyboardIdentifier="GameStart" id="lni-YF-WU5" customClass="GameStartViewController" sceneMemberID="viewController">
@@ -505,10 +506,6 @@
                                     <action selector="start" destination="lni-YF-WU5" eventType="touchUpInside" id="gmf-md-nmA"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gametouch.png" id="wIo-eA-MCp">
-                                <rect key="frame" x="0.0" y="-5" width="320" height="580"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cn4-yy-vyX">
                                 <rect key="frame" x="4" y="3" width="75" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -519,6 +516,10 @@
                                     <action selector="back" destination="lni-YF-WU5" eventType="touchUpInside" id="jGd-l7-179"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gametouch.png" id="wIo-eA-MCp">
+                                <rect key="frame" x="0.0" y="-6" width="320" height="580"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -619,10 +620,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="CJh-EJ-IeV">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -650,7 +647,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UDJ-4z-IBe">
-                                <rect key="frame" x="64" y="389" width="192" height="71"/>
+                                <rect key="frame" x="64" y="432" width="192" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="finishbutton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -660,7 +657,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="C6c-Wl-emq">
-                                <rect key="frame" x="64" y="317" width="192" height="70"/>
+                                <rect key="frame" x="64" y="354" width="192" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="continuebutton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -676,16 +673,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="54Z-3V-KOo">
-                                <rect key="frame" x="121" y="468" width="78" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="shareButton(仮).png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="twitterShare" destination="vXH-4D-l8x" eventType="touchUpInside" id="h8B-q8-ojn"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -725,7 +712,6 @@
         <image name="room1.png" width="1000" height="1000"/>
         <image name="roomback1.png" width="640" height="1136"/>
         <image name="roomgage0.png" width="500" height="500"/>
-        <image name="shareButton(仮).png" width="500" height="500"/>
         <image name="stageselectbackground.png" width="640" height="1136"/>
         <image name="table1.png" width="1000" height="1000"/>
         <image name="tableback1.png" width="640" height="1136"/>

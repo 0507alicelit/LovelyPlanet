@@ -10,12 +10,6 @@
 
 @interface ViewController ()
 
-/*
-ありさ愛してるようふふ
-えへへおほほ
-てへぺろー
-*/
-
 @end
 
 @implementation ViewController{

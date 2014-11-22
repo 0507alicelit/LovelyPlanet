@@ -33,6 +33,7 @@
 }
 
 -(IBAction)start;
+// @property (strong, nonatomic) UIWindow *window;
 
 @property (nonatomic) UIImageView *heartImageArray;
 @end

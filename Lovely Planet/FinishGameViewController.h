@@ -27,6 +27,4 @@
 -(IBAction)finish;
 -(IBAction)twitterShare;
 
-
-
 @end

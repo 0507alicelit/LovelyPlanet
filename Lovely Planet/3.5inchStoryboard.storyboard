@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="eO6-Rg-j1O">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="RDv-tK-NK2">
+            <objects>
+                <viewController id="eO6-Rg-j1O" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PKs-5v-hb9"/>
+                        <viewControllerLayoutGuide type="bottom" id="v6u-86-fgA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UjA-qY-44X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="top(3.5).png" translatesAutoresizingMaskIntoConstraints="NO" id="UgG-vn-I6J">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50K-9Z-exV">
+                                <rect key="frame" x="94" y="307" width="214" height="214"/>
+                                <state key="normal" backgroundImage="startButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukJ-vZ-3pA">
+                                <rect key="frame" x="0.0" y="446" width="68" height="34"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="リセット">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S9A-OT-qRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-782" y="-528"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vSq-vu-Vsl">
+            <objects>
+                <viewController id="O2Y-iR-Axu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x1f-kK-8nc"/>
+                        <viewControllerLayoutGuide type="bottom" id="pXt-ho-hEE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="trZ-Yv-Io8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z7X-g7-jvK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S43-W6-qkm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-782" y="140"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NAA-yW-hB7">
+            <objects>
+                <viewController id="enX-Bf-lJk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k9s-O3-Oy3"/>
+                        <viewControllerLayoutGuide type="bottom" id="jeD-bT-z7h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eqb-vO-Auq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Dc-ZA-arq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-417" y="140"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="muj-hN-Eip">
+            <objects>
+                <viewController id="4mc-md-tXh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pUF-SH-d1z"/>
+                        <viewControllerLayoutGuide type="bottom" id="mxn-SA-8hi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wfs-6d-iz4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g4s-yR-chX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55" y="140"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Wlw-9Z-C7s">
+            <objects>
+                <viewController id="68S-nR-Uce" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MC0-gc-cgF"/>
+                        <viewControllerLayoutGuide type="bottom" id="EGc-zX-jHj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Npc-x0-NFI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NYG-jt-M3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="315" y="140"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="H1p-Af-A94">
+            <objects>
+                <viewController id="XSd-ZI-nme" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x31-Hn-K9j"/>
+                        <viewControllerLayoutGuide type="bottom" id="tho-kh-k3d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AsY-ih-5yb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gYs-eJ-U8B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="687" y="140"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ma7-iV-aT2">
+            <objects>
+                <viewController id="A3N-MY-T9l" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gdw-Hj-TCE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hso-XI-R4G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qt5-mo-DXT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gamestartbackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZZN-vx-Hz3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qm-gb-Gmk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <state key="normal" backgroundImage="gametouch.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfT-Hk-D4h">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="67"/>
+                                <state key="normal" backgroundImage="gamebackbutton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YHa-uH-VUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-417" y="-528"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PTs-8R-qKo">
+            <objects>
+                <viewController id="wVS-8w-vCf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7dt-lL-Dju"/>
+                        <viewControllerLayoutGuide type="bottom" id="3WC-Qc-duC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wqx-FI-OXY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gamebackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="Iyk-VE-hmp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hitzone.png" translatesAutoresizingMaskIntoConstraints="NO" id="aoN-HJ-7q0">
+                                <rect key="frame" x="230" y="20" width="85" height="85"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="判定" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJF-RM-KDS">
+                                <rect key="frame" x="255" y="52" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.19607844948768616" green="0.76862752437591553" blue="0.38431376218795776" alpha="1" colorSpace="deviceRGB"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tori.png" translatesAutoresizingMaskIntoConstraints="NO" id="c9Z-yV-vxH">
+                                <rect key="frame" x="62" y="91" width="197" height="181"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgA-21-ZqZ">
+                                <rect key="frame" x="56" y="260" width="100" height="100"/>
+                                <state key="normal" image="eggyellow.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhT-Uv-qXt">
+                                <rect key="frame" x="164" y="260" width="100" height="100"/>
+                                <state key="normal" image="eggorange.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzq-Sy-WLT">
+                                <rect key="frame" x="220" y="354" width="100" height="100"/>
+                                <state key="normal" image="eggblue.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZ8-gy-Oy5">
+                                <rect key="frame" x="110" y="354" width="100" height="100"/>
+                                <state key="normal" image="eggglay.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGW-EN-0LC">
+                                <rect key="frame" x="0.0" y="354" width="100" height="100"/>
+                                <state key="normal" image="eggpink.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UBM-Vv-H1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55" y="-528"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="X1M-LB-Jbp">
+            <objects>
+                <viewController id="Eu5-i9-Obw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1B8-Gj-pUI"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Jl-aL-MRp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="APa-ur-Ini">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="finish.png" translatesAutoresizingMaskIntoConstraints="NO" id="nfS-Pt-8uu">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="backgroundColor" red="0.31372550129890442" green="0.99215692281723022" blue="0.54901963472366333" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="tintColor" red="0.31372550129890442" green="0.99215692281723022" blue="0.54901963472366333" alpha="1" colorSpace="deviceRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKW-k4-KV6">
+                                <rect key="frame" x="64" y="374" width="192" height="70"/>
+                                <state key="normal" image="finishbutton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Waj-BC-KKl">
+                                <rect key="frame" x="64" y="296" width="192" height="70"/>
+                                <state key="normal" image="continuebutton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNA-Zj-gat">
+                                <rect key="frame" x="82" y="62" width="105" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="点" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmP-Xa-2f9">
+                                <rect key="frame" x="195" y="67" width="17" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V1t-f2-9Wq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="315" y="-528"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="continuebutton.png" width="500" height="180"/>
+        <image name="eggblue.png" width="1000" height="1000"/>
+        <image name="eggglay.png" width="1000" height="1000"/>
+        <image name="eggorange.png" width="1000" height="1000"/>
+        <image name="eggpink.png" width="1000" height="1000"/>
+        <image name="eggyellow.png" width="1000" height="1000"/>
+        <image name="finish.png" width="640" height="1136"/>
+        <image name="finishbutton.png" width="500" height="180"/>
+        <image name="gamebackbutton.png" width="150" height="150"/>
+        <image name="gamebackground.png" width="640" height="1136"/>
+        <image name="gamestartbackground.png" width="640" height="1136"/>
+        <image name="gametouch.png" width="640" height="1136"/>
+        <image name="hitzone.png" width="1000" height="1000"/>
+        <image name="startButton.png" width="500" height="500"/>
+        <image name="top(3.5).png" width="640" height="960"/>
+        <image name="tori.png" width="500" height="500"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

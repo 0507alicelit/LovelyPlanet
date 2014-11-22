@@ -20,86 +20,37 @@
 
 -(IBAction)onemore{
     GameStartViewController *gameStartVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GameStart"];
-    [self presentViewController:gameStartVC animated:YES completion:nil];}
+    [self presentViewController:gameStartVC animated:YES completion:nil];
+}
 
 -(IBAction)finish{
     StageSelectViewController *stageSelectVC = [self.storyboard instantiateViewControllerWithIdentifier:@"StageSelect"];
     [self presentViewController:stageSelectVC animated:YES completion:nil];
 }
 
-- (IBAction)twitterShare{
+-(IBAction)twitterShare{
+    //コメント、写真、URLを投稿する。
+    //メソッドの引数(serveceType）で、どこのサービスに投稿するか認識。
     
-    // Twitterアカウントが端末に設定されているか？
-    if ( ! [SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
-        NSLog(@"設定できてません");
-        return;
-    }
+    NSString *setText = [NSString stringWithFormat:@"%d点でした！！ #LovelyPlanet",nowHeartPoint];   //コメント欄に文字を表示
     
-    // 設定されてるアカウントを取得(マルチアカウントってな)
-    ACAccountStore *accountStore = [ACAccountStore new];
-    ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
-
+    //投稿用画面のインスタンスを作成
+    SLComposeViewController *composeController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
     
-    [accountStore requestAccessToAccountsWithType:accountType
-                                          options:nil
-                                       completion:^(BOOL granted, NSError *error) {
-                                           
-                                           if ( ! granted) {
-                                               return;
-                                           }
-                                           
-                                           self.accounts = [accountStore accountsWithAccountType:accountType];
-                                           
-                                           // ゲーム用、プライベート用などいろいろあるとおもうんで
-                                           // せめて選ばせたい
-                                           dispatch_async(dispatch_get_main_queue(), ^{
-                                               UIActionSheet *actionSheet = [UIActionSheet new];
-                                               actionSheet.title = @"アカウントえらんでね";
-                                               for (ACAccount *account in self.accounts) {
-                                                   [actionSheet addButtonWithTitle:account.username];
-                                               }
-                                               [actionSheet addButtonWithTitle:@"cancel"];
-                                               actionSheet.cancelButtonIndex = [self.accounts count];
-                                               actionSheet.delegate = self;
-                                               [actionSheet showInView:self.view];
-                                           });
-                                           
-                                       }];
+    [composeController setInitialText:setText]; //コメントのセット
     
-}
-
-// アカウント選択後
-- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex{
-    if (buttonIndex == actionSheet.cancelButtonIndex) {
-        return;
-    }
-    
-    // 投稿するGIF
-    NSURL *gifUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"mikumiku" ofType:@"gif"]];
-    NSData *gifData = [NSData dataWithContentsOfURL: gifUrl];
-    
-    // 投稿処理へ
-    ACAccount *account = [self.accounts objectAtIndex:buttonIndex];
-    
-    // twitter api
-    NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/update_with_media.json"];
-    NSString * massage = [NSString stringWithFormat:@"%d点でした！「Lovely Planet」#らぶぷら",nowHeartPoint];
-    NSDictionary *params = @{@"status" : massage};  // めっせーじ
-    
-    
-    // request の作成
-    SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter
-                                            requestMethod:SLRequestMethodPOST
-                                                      URL:url
-                                               parameters:params];
-    
-    [request setAccount:account];       // 投稿アカウントの指定
-    [request addMultipartData:gifData withName:@"media[]" type:@"image/gif" filename:@"image.gif"]; //マルチパートの設定
-    
-    // リクエスト投げる
-    [request performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
-        NSLog(@"response : %@", [urlResponse debugDescription]);
+    //投稿が完了したかの確認
+    [composeController setCompletionHandler:^(SLComposeViewControllerResult result) {
+        if (result == SLComposeViewControllerResultCancelled) {
+            // キャンセルした場合
+            NSLog(@"キャンセルしました");
+        } else if (result == SLComposeViewControllerResultDone) {
+            // 投稿に成功した場合
+            NSLog(@"投稿しました");
+        }
     }];
+    
+    [self presentViewController:composeController animated:YES completion:nil];
     
 }
 
