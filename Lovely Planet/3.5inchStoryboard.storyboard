@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="RDv-tK-NK2">
             <objects>
-                <viewController id="eO6-Rg-j1O" sceneMemberID="viewController">
+                <viewController id="eO6-Rg-j1O" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PKs-5v-hb9"/>
                         <viewControllerLayoutGuide type="bottom" id="v6u-86-fgA"/>
@@ -25,6 +25,9 @@
                                 <state key="normal" backgroundImage="startButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="start" destination="eO6-Rg-j1O" eventType="touchUpInside" id="tBb-vF-kBI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukJ-vZ-3pA">
                                 <rect key="frame" x="0.0" y="446" width="68" height="34"/>
@@ -32,6 +35,9 @@
                                 <state key="normal" title="リセット">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="reset" destination="eO6-Rg-j1O" eventType="touchUpInside" id="S8U-Df-5tQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

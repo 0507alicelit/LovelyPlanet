@@ -12,10 +12,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //3.5inchと4inchを読み分けする
+    CGRect rect = [UIScreen mainScreen].bounds;
+    if (rect.size.height == 480) {
+        UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"3.5inchStoryboard" bundle:nil];
+        UIViewController* rootViewController = [storyboard instantiateInitialViewController];
+        
+        self.window.rootViewController = rootViewController;
+    }
     
-    UIStoryboard *storyboard; // StoryBoardの型宣言
-    NSString * storyBoardName; // StoryBoardの名称設定用
-    // 機種の取得
+    return YES;
+    
+    /*
+     UIStoryboard *storyboard; // StoryBoardの型宣言
+     NSString * storyBoardName; // StoryBoardの名称設定用
+     // 機種の取得
     NSString *modelname = [ [ UIDevice currentDevice] model];
     // iPadかどうか判断する
     if ( ![modelname hasPrefix:@"iPad"] ) {
@@ -43,7 +54,7 @@
     [self.window makeKeyAndVisible];
     
     // Override point for customization after application launch.
-    return YES;
+    return YES;*/
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
